@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>footprinttalent.com</title>
-<meta name="description" content="footprinttalent connects exceptional talent with ambitious teams.">
+<meta name="description" content="Footprint Talent Advisory helps founders and PE-backed companies build strong talent teams. We offer AI-powered talent systems, fractional talent leaders, and search for key roles.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -213,33 +213,6 @@
 
   .btn-ghost:hover { border-color: var(--ink); }
 
-  /* Stats strip */
-  .stats {
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    padding: 40px 0;
-  }
-
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    text-align: center;
-  }
-
-  .stat-num {
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-  }
-
-  .stat-label {
-    color: var(--ink-soft);
-    font-size: 0.88rem;
-    margin-top: 4px;
-  }
-
   /* Section shared */
   section { padding: 88px 0; }
 
@@ -319,43 +292,20 @@
     margin: 0;
   }
 
-  /* Process */
+  /* Approach */
   .process-alt { background: var(--paper-raised); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 
-  .process-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
-    counter-reset: step;
+  .approach-copy {
+    max-width: 720px;
   }
 
-  .step {
-    position: relative;
-    padding-top: 8px;
-  }
-
-  .step::before {
-    counter-increment: step;
-    content: counter(step, decimal-leading-zero);
-    display: block;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: 0.05em;
-    margin-bottom: 14px;
-  }
-
-  .step h3 {
-    font-size: 1.05rem;
-    margin: 0 0 8px;
-    letter-spacing: -0.01em;
-  }
-
-  .step p {
+  .approach-copy p {
     color: var(--ink-soft);
-    font-size: 0.92rem;
-    margin: 0;
+    font-size: 1.05rem;
+    margin: 0 0 20px;
   }
+
+  .approach-copy p:last-child { margin-bottom: 0; }
 
   /* About */
   .about-grid {
@@ -373,13 +323,6 @@
     border: 1px solid var(--line);
   }
 
-  .about-copy h3 {
-    font-family: var(--font-display);
-    font-size: 1.3rem;
-    margin: 0 0 4px;
-    letter-spacing: -0.01em;
-  }
-
   .about-role {
     color: var(--accent);
     font-weight: 600;
@@ -390,10 +333,25 @@
   .about-copy p {
     color: var(--ink-soft);
     font-size: 1rem;
-    margin: 0 0 16px;
+    margin: 0 0 20px;
   }
 
-  .about-copy p:last-child { margin-bottom: 0; }
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.82rem;
+  }
 
   /* CTA band */
   .cta-band {
@@ -452,9 +410,7 @@
 
   @media (max-width: 860px) {
     .nav-links, .nav-cta { display: none; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .services-grid { grid-template-columns: 1fr; }
-    .process-list { grid-template-columns: repeat(2, 1fr); }
     .about-grid { grid-template-columns: 1fr; }
     .about-photo { max-width: 200px; }
     .cta-band { padding: 36px; flex-direction: column; align-items: flex-start; }
@@ -469,99 +425,62 @@
     <a class="brand" href="#top">footprint<span class="ast">*</span><span class="tagline">Talent Advisory</span></a>
     <nav>
       <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#process">Process</a></li>
+        <li><a href="#services">Three ways of working</a></li>
+        <li><a href="#approach">How we work</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <a class="nav-cta" href="#contact">Start a search</a>
+    <a class="nav-cta" href="#contact">Get in touch</a>
   </div>
 </header>
 
 <main id="top">
   <section class="hero">
     <div class="wrap hero-inner">
-      <span class="eyebrow">Talent &amp; recruiting partner</span>
-      <h1>We connect exceptional talent with ambitious teams.</h1>
-      <p class="lead">footprinttalent is a boutique recruiting agency that helps growing companies hire the people who move them forward — faster, and with less noise.</p>
+      <span class="eyebrow">For founders &amp; PE-backed operators</span>
+      <h1>People decisions you can't afford to get wrong.</h1>
+      <p class="lead">We help founders and PE-backed operators get people decisions right the first time.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact">Start a search</a>
-        <a class="btn btn-ghost" href="#services">See what we do</a>
+        <a class="btn btn-primary" href="#contact">Get in touch</a>
+        <a class="btn btn-ghost" href="#services">See the three ways of working</a>
       </div>
     </div>
   </section>
 
-  <div class="stats wrap">
-    <div class="stats-grid">
-      <div>
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Focused on fit, not just filling seats</div>
-      </div>
-      <div>
-        <div class="stat-num">1:1</div>
-        <div class="stat-label">Dedicated recruiter per search</div>
-      </div>
-      <div>
-        <div class="stat-num">&lt; 2 wks</div>
-        <div class="stat-label">Typical time to first shortlist</div>
-      </div>
-      <div>
-        <div class="stat-num">360°</div>
-        <div class="stat-label">Support from brief to offer</div>
-      </div>
-    </div>
-  </div>
-
   <section id="services" class="wrap">
     <div class="section-head">
-      <span class="section-tag">Services</span>
-      <h2>Recruiting built around how you actually hire</h2>
-      <p>Whether you need one critical hire or a repeatable pipeline, we tailor the engagement to the role and the stage you're at.</p>
+      <span class="section-tag">Three ways of working</span>
+      <h2>Three ways of working</h2>
     </div>
     <div class="services-grid">
       <div class="card">
         <div class="card-icon">*</div>
-        <h3>Executive search</h3>
-        <p>Confidential, high-touch searches for leadership and specialist roles where the wrong hire is expensive.</p>
+        <h3>AI-native talent tech stack</h3>
+        <p>We rebuild your talent systems with AI. This makes hiring faster, cuts risk, and keeps compliance from depending on someone's memory.</p>
       </div>
       <div class="card">
         <div class="card-icon">*</div>
-        <h3>Team scaling</h3>
-        <p>Structured pipelines for companies hiring multiple roles at once, with consistent process and fast feedback loops.</p>
+        <h3>Fractional talent leadership</h3>
+        <p>A Head of Talent runs your talent function for a set time. It starts with Eryn and grows into a small team of trusted operators.</p>
       </div>
       <div class="card">
         <div class="card-icon">*</div>
-        <h3>Contract &amp; project talent</h3>
-        <p>Vetted specialists for fixed-scope work, interim leadership, or coverage while you run a permanent search.</p>
+        <h3>Board and executive search</h3>
+        <p>We search for the few roles that can change your company's future.</p>
       </div>
     </div>
   </section>
 
-  <section id="process" class="process-alt">
+  <section id="approach" class="process-alt">
     <div class="wrap">
       <div class="section-head">
-        <span class="section-tag">How it works</span>
-        <h2>A process built for speed without cutting corners</h2>
-        <p>Every search follows the same disciplined process, adapted to your role and team.</p>
+        <span class="section-tag">How we work</span>
+        <h2>Judgment in the room, not a sales pitch</h2>
       </div>
-      <div class="process-list">
-        <div class="step">
-          <h3>Scope the role</h3>
-          <p>We start with a working session to understand the role, the team, and what success looks like in six months.</p>
-        </div>
-        <div class="step">
-          <h3>Source &amp; screen</h3>
-          <p>We go beyond inbound applicants to actively source and pre-vet candidates against your specific bar.</p>
-        </div>
-        <div class="step">
-          <h3>Shortlist &amp; brief</h3>
-          <p>You meet a focused shortlist, each with a written summary of fit, motivation, and risk areas.</p>
-        </div>
-        <div class="step">
-          <h3>Close the hire</h3>
-          <p>We manage references, offer strategy, and negotiation so the process ends in an accepted offer.</p>
-        </div>
+      <div class="approach-copy">
+        <p>Footprint uses AI better than most firms in this field. We reach for it whenever it makes the work faster or sharper for you. But AI is one tool, not the only one. We've run talent teams with too few people and a board that wants results now. That's the lens we bring to every project.</p>
+        <p>We're known for good judgment. Eryn ran her own search firm for eight years. Then she spent eight more years inside PE-backed companies, building their talent teams from scratch. Bring us a problem, and we'll tell you how we'd solve it — not just write you a proposal.</p>
       </div>
     </div>
   </section>
@@ -569,16 +488,28 @@
   <section id="about" class="wrap">
     <div class="section-head">
       <span class="section-tag">About</span>
-      <h2>Led by someone who's built talent functions from scratch — twice</h2>
+      <h2>Eryn McHugh</h2>
     </div>
     <div class="about-grid">
       <img class="about-photo" src="assets/eryn-mchugh.jpg" alt="Eryn McHugh, Founder of Footprint Talent Advisory">
       <div class="about-copy">
-        <h3>Eryn McHugh</h3>
         <p class="about-role">Founder, Footprint Talent Advisory</p>
-        <p>Eryn founded the original Footprint Talent in 2010 and spent eight years running executive searches for PE- and VC-backed companies — placing board members, CFOs, CHROs, and General Counsel where the wrong hire would have been very expensive.</p>
-        <p>She then spent nearly a decade on the other side of the table, building talent and people functions from the ground up inside fast-growing companies — running talent acquisition and, later, all of people operations as Chief People Officer. That operating experience is what shapes how Footprint Talent Advisory works today: less like a vendor filling a req, more like a partner who has actually owned the hiring plan, the budget, and the outcome.</p>
-        <p>She founded Footprint Talent Advisory to bring that same standard to PE-backed and growth-stage SaaS and professional services companies scaling their people and talent functions from the ground up.</p>
+        <p>Eryn ran her own search firm for eight years. Then she spent eight more years building talent teams inside PE-backed companies.</p>
+        <div class="tag-list">
+          <span class="tag">Fractional Talent Leadership</span>
+          <span class="tag">Executive Search</span>
+          <span class="tag">Talent Acquisition Strategy</span>
+          <span class="tag">AI-Native Talent Architecture</span>
+          <span class="tag">HR Tech Stack Design &amp; Integration (Greenhouse, Rippling, Pave, Gem, SeekOut)</span>
+          <span class="tag">AI Enablement (Claude, OpenAI, n8n, Zapier)</span>
+          <span class="tag">Sourcing Automation</span>
+          <span class="tag">Workforce Planning</span>
+          <span class="tag">Employer Brand &amp; EVP</span>
+          <span class="tag">Onboarding &amp; Early-Tenure Strategy</span>
+          <span class="tag">People Analytics</span>
+          <span class="tag">Compensation Strategy</span>
+          <span class="tag">Organizational Scaling (0 to 1, 1 to 2)</span>
+        </div>
       </div>
     </div>
   </section>
@@ -586,8 +517,8 @@
   <section class="wrap">
     <div class="cta-band">
       <div>
-        <h2>Ready to make your next hire?</h2>
-        <p>Tell us about the role and we'll get back to you within a business day.</p>
+        <h2>Ready to talk about what's next?</h2>
+        <p>Tell us what you're facing. We'll get back to you within a business day.</p>
       </div>
       <a class="btn btn-primary" id="contact" href="mailto:hello@footprinttalent.com">Get in touch</a>
     </div>
@@ -598,8 +529,8 @@
   <div class="wrap footer-row">
     <a class="brand" href="#top">footprint<span class="ast">*</span><span class="tagline">Talent Advisory</span></a>
     <ul class="footer-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#process">Process</a></li>
+      <li><a href="#services">Three ways of working</a></li>
+      <li><a href="#approach">How we work</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="mailto:hello@footprinttalent.com">Contact</a></li>
     </ul>
